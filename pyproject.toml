@@ -1,0 +1,21 @@
+[project]
+name = "style_guide_enricher"
+version = "0.1.0"
+description = "style-guide-enricher using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.82.0,<1.0.0",
+    
+]
+
+[project.scripts]
+style_guide_enricher = "style_guide_enricher.main:run"
+run_crew = "style_guide_enricher.main:run"
+train = "style_guide_enricher.main:train"
+replay = "style_guide_enricher.main:replay"
+test = "style_guide_enricher.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

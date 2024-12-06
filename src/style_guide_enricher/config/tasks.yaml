@@ -1,0 +1,24 @@
+research_fashion_trends_task:
+  description: >
+    Research the latest best practices and industry standards for {product_type} product titles.
+    Use external sources to identify new guidelines or improved formatting strategies.
+  expected_output: >
+    A markdown-formatted bullet-point list of new recommendations to integrate into the style guide.
+  agent: style_guide_researcher
+
+augment_style_guide_task:
+  description: >
+    Read the base style guide template (e.g., base_style_guide_template.md) and the newly researched guidelines (e.g., research_findings.md).
+    Combine them to produce an updated style guide (updated_style_guide.md) that retains the original structure and formatting
+    while incorporating the new best practices.
+  expected_output: >
+    A markdown-formatted updated style guide integrating both original and new guidelines.
+  agent: style_guide_enhancer
+
+review_style_guide_task:
+  description: >
+    Compare the updated style guide (updated_style_guide.md) to the base template (base_style_guide_template.md)
+    to ensure all formatting, sequences, and structural rules match the reference. Highlight any discrepancies and suggest corrections.
+  expected_output: >
+    A summary indicating whether the updated style guide complies with the reference format, along with corrective suggestions if necessary.
+  agent: style_guide_reviewer
